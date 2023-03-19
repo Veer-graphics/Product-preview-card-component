@@ -1,0 +1,164 @@
+/* universal */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat',sans-serif;
+    list-style-type: none;
+}
+/* root */
+:root{
+--Dark-cyan: hsl(158, 36%, 37%);
+--btn-hover: #1A4031;
+--Cream: hsl(30, 38%, 92%);
+
+--Very-dark-blue: hsl(212, 21%, 14%);
+--Dark-grayish-blue: hsl(228, 12%, 48%);
+--White: hsl(0, 0%, 100%);
+}
+/* body */
+body{
+    font-size: 14px;
+    background-color: var(--Cream);
+    width: 100%;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+/* global typography */
+h1,h2{
+    font-family: 'Fraunces',serif;
+    font-weight: 700;
+    line-height: 1;
+}
+p{
+    color: var(--Dark-grayish-blue);
+}
+/* img */
+img{
+    max-width: 100%;
+}
+.desktop-img{
+    display: none;
+}
+/* main */
+main{
+    padding: 30px 15px;
+}
+/* grid */
+.grid{
+    display: grid;
+    background-color: var(--White);
+    overflow: hidden;
+    border-radius: 10px;
+    max-width: 700px;
+}
+/* card content */
+.card-content{
+    padding: 25px;
+}
+
+.perfume{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.heading1{
+    font-size: 30px;
+    color: var(--Very-dark-blue);
+    margin: 10px 0;
+}
+/* price */
+.price{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+.currentPrice{
+    color: var(--Dark-cyan);
+    font-size: 27px;
+}
+.previousPrice{
+    text-decoration: line-through;
+    color: var(--Dark-grayish-blue);
+}
+/* button */
+.btn{
+    border: none;
+    outline: none;
+    background-color: var(--Dark-cyan);
+    cursor: pointer;
+    transition: .3s ease all;
+    padding: 15px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 7px;
+    color: var(--White);
+    font-weight: 700;
+    width: 100%;
+}
+.btn:hover{
+    background-color: var(--btn-hover);
+}
+
+/* desktop design */
+@media (min-width : 700px)
+{
+    /* img */
+    .mobile-img{
+        display: none;
+    }
+    .desktop-img{
+        display: block;
+    }
+    /* body */
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    /* main */
+    main{
+        padding: 80px 15px;
+    }
+    /* grid */
+    .grid{
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    }
+    /* text wrapper */
+    .card-content{
+        padding: 40px;
+    }
+    .perfume{
+        margin-bottom: 25px;
+    }
+    .heading1{
+        font-size: 35px;
+        max-width: 90%;
+    }
+    .product-description{
+        max-width: 85%;
+    }
+    /* price */
+    .price{
+        margin: 40px 0;
+    }
+    .currentPrice{
+        font-size: 30px;
+    }
+
+}
+/* attribution */
+footer{
+    margin-top: 50px;
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
